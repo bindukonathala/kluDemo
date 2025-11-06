@@ -7,6 +7,9 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
+            - name: checkout first
+              uses: actions/checkout@v4
+              
             - name: Welcome KLU
               run: echo "Welcome KLU demo"
 
