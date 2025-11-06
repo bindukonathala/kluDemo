@@ -1,0 +1,19 @@
+name: shell_script_workflow
+on: push
+
+# this workflow is to verify shell scripts 
+
+jobs:
+    shellScriptJob:
+        name: verify shell script
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: checkout code
+              uses: actions/checkout@v4
+
+            - name: list all the files
+              run: ls -lart
+            
+            - name: Execute the shell script
+              run: .github/workflows/install_curl.sh
