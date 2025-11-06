@@ -16,6 +16,7 @@ jobs:
               run: sleep 30
 
     test-job:
+        needs: build-job
         runs-on: ubuntu-latest
         steps:
             - name: display README.md content
@@ -24,6 +25,7 @@ jobs:
               run: sleep 10
 
     deploy-job:
+        needs: test-job
         runs-on: ubuntu-latest
         steps:
             - name: display all files
