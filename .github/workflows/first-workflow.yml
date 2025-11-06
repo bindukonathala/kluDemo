@@ -1,0 +1,14 @@
+name: first_workflow
+on: push
+
+jobs:
+    firstJob:
+        name: verify README 
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Welcome KLU
+              run: echo "Welcome KLU demo"
+
+            - name: Display README content
+              run: cat README.md
