@@ -16,4 +16,6 @@ jobs:
               run: ls -lart
             
             - name: Execute the shell script
-              run: .github/workflows/install_curl.sh
+              run: |
+                chmod +x .github/workflows/install_curl.sh
+                .github/workflows/install_curl.sh
